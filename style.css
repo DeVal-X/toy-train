@@ -1,0 +1,338 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, #be5eff, #3251ff );
+}
+
+span {
+    font-size: 9px;
+}
+
+.toy-train {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    width: 109px;
+    transform: scale(1.2);
+}
+
+.engine {
+    float: right;
+    position: relative;
+
+}
+
+.window {
+    height: 28px;
+    width: 30px;
+    background-color: blue;
+    position: relative;
+    border: 3px solid black;
+}
+
+.window:before,
+.window:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    border: 3px solid black;
+  }
+  
+.window:before {
+    height: 7px;
+    background-color: red;
+    width: 45px;
+    margin-top: -13px;
+    margin-left: -26px;
+    border-radius: 8px;
+}
+  
+.window:after {
+    margin-left: -8px;
+    margin-top: 3px;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    background-color: white;
+}
+
+.engine-main {
+  height: 10px;
+  width: 35px;
+  border: 3px solid black;
+  background-color: green;
+  position: absolute;
+  border-radius: 0 8px 8px 0;
+  right: -40px;
+  bottom: -2.5px;
+}
+  
+.engine-main:before {
+    content: "";
+    height: 8px;
+    width: 6px;
+    background-color:rgb(68, 68, 68);
+    border: 2px solid black;
+    position: absolute;
+    top: -13px;
+    left: 3px;
+    transform: rotate(180deg);
+    border-radius: 50% 50% 50% 50% / 90% 90% 40% 40%;
+  }
+  
+.engine-main:after {
+    content: "";
+    height: 12px;
+    width: 8px;
+    position: absolute;
+    display: block;
+    right: 5px;
+    top: -18px;
+    border-radius: 50% 50% 50% 50% / 90% 90% 40% 40%;
+    transform: rotate(180deg);
+    z-index: -1;
+    background-color:rgb(68, 68, 68);
+    border: 2px solid black;
+  }
+
+.engine-body {
+  height: 20px;
+  width: 75px;
+  position: absolute;
+  left: -2px;
+  top: 30px;
+  background-color: rgb(245, 176, 28);
+  border: 3px solid black;
+  border-radius: 5px;
+}
+  
+.big-wheel {
+    top: 3px;
+    left: 2px;
+}
+
+.normal-wheel {
+    left: 45px;
+    top: 5px;
+}
+  
+.engine-body:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    left: -11px;
+    bottom: 2px;
+    z-index: -1;
+    background-color:rgb(255, 255, 255);
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+
+.wheels>div {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    border: 3px solid black;
+    animation: wheel-rotate 1s linear infinite;
+}
+    
+.wheels>div:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid black;
+    top: 50%;
+    margin-top: -1px;
+}
+    
+.wheels>div:after {
+    content: "";
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -4px;
+    margin-top: -4px;
+}
+
+.big-wheel {
+width: 22px;
+height: 22px;
+animation-delay: -0.3s;
+}
+
+.normal-wheel {
+height: 20px;
+width: 20px;
+animation-delay: -0.6s;
+}
+
+.locomotive {
+  height: 35px;
+  width: 60px;
+  border: 3px solid black;
+  background-color: rgb(245, 176, 28);
+  border-radius: 5px;
+  position: relative;
+  float: left;
+  margin-top: 13px;
+  z-index: 1;
+}
+  
+.locomotive .wheels div{
+    top: 40px;
+    animation-delay: -0.6s;
+}
+      
+.locomotive .wheels:first-child {
+    animation-delay: -0.9s;
+  }
+  
+.normal-wheel:first-of-type {
+    left: -5px;
+  }
+  
+.normal-wheel:last-of-type {
+    left: 50px;
+}
+  
+  
+.trash {
+    height: 12px;
+    width: 50px;
+    position: absolute;
+    top: -18px;
+    border: 3px solid black;
+    background-color: green;
+    border-radius: 50px 50px 0 0;
+    left: 2px;
+}
+
+.tracks {
+  position: relative;
+  width: 200px;
+  bottom: -10px;
+  overflow: hidden;
+  height: 3px;
+}
+  
+.tracks>span {
+    display: inline-block;
+    height: 3px;
+    width: 200px;
+    position: absolute;
+    left: 200px;
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 30%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 39%,rgba(0,0,0,1) 39%,rgba(0,0,0,1) 61%,rgba(0,0,0,1) 65%,rgba(0,0,0,0) 65%,rgba(0,0,0,0) 70%,rgba(0,0,0,1) 71%,rgba(0,0,0,1) 100%);
+    animation: track 2s linear infinite;
+    animation-fill-mode: forwards;
+}
+   
+.tracks>span:nth-child(2) {
+    animation-delay: -1s;
+}
+
+
+.smokes:after{
+    display: block;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    z-index: -1;
+    animation: smoke 1s linear infinite;
+    animation-delay: -0.3s;
+}
+
+.smokes:before{
+    display: block;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    z-index: -1;
+    animation: smoke 1s linear infinite;
+}
+
+.smokes>span:before{
+    display: block;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    z-index: -1;
+    animation: smoke 1s linear infinite;
+    animation-delay: -0.6s;
+}
+
+
+/* .smokes {
+  &:before, 
+  &:after,
+  span:before {
+    display: block;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    z-index: -1;
+  }
+  
+  &:before {
+    animation: smoke 1s linear infinite;
+  }
+  
+  span:before {
+    animation: smoke 1s linear infinite;
+    animation-delay: -0.6s;
+  }
+  
+  &:after {
+    animation: smoke 1s linear infinite;
+    animation-delay: -0.3s;
+  }
+} */
+
+@keyframes smoke {
+  100% {
+   top: -50px;
+   opacity: 0.5;
+  }
+}
+
+@keyframes wheel-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes track {
+  100% {
+   left: -200px;
+  }
+}
+
