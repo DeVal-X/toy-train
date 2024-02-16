@@ -41,7 +41,7 @@ span {
     left: 50%;
     border: 3px solid black;
   }
-  
+
 .window:before {
     height: 7px;
     background-color: red;
@@ -50,7 +50,7 @@ span {
     margin-left: -26px;
     border-radius: 8px;
 }
-  
+
 .window:after {
     margin-left: -8px;
     margin-top: 3px;
@@ -70,7 +70,7 @@ span {
   right: -40px;
   bottom: -2.5px;
 }
-  
+
 .engine-main:before {
     content: "";
     height: 8px;
@@ -83,7 +83,7 @@ span {
     transform: rotate(180deg);
     border-radius: 50% 50% 50% 50% / 90% 90% 40% 40%;
   }
-  
+
 .engine-main:after {
     content: "";
     height: 12px;
@@ -109,17 +109,17 @@ span {
   border: 3px solid black;
   border-radius: 5px;
 }
-  
-.big-wheel {
+
+.engine-body .wheels .big-wheel {
     top: 3px;
     left: 2px;
 }
 
-.normal-wheel {
+.engine-body .wheels .normal-wheel {
     left: 45px;
     top: 5px;
 }
-  
+
 .engine-body:before {
     content: "";
     position: absolute;
@@ -141,7 +141,7 @@ span {
     border: 3px solid black;
     animation: wheel-rotate 1s linear infinite;
 }
-    
+
 .wheels>div:before {
     content: "";
     position: absolute;
@@ -150,7 +150,7 @@ span {
     top: 50%;
     margin-top: -1px;
 }
-    
+
 .wheels>div:after {
     content: "";
     height: 8px;
@@ -187,25 +187,25 @@ animation-delay: -0.6s;
   margin-top: 13px;
   z-index: 1;
 }
-  
+
 .locomotive .wheels div{
-    top: 40px;
+    top: 37px;
     animation-delay: -0.6s;
 }
-      
+
 .locomotive .wheels:first-child {
     animation-delay: -0.9s;
   }
-  
+
 .normal-wheel:first-of-type {
     left: -5px;
   }
-  
+
 .normal-wheel:last-of-type {
-    left: 50px;
+  left: 29px;
 }
-  
-  
+
+
 .trash {
     height: 12px;
     width: 50px;
@@ -223,8 +223,9 @@ animation-delay: -0.6s;
   bottom: -10px;
   overflow: hidden;
   height: 3px;
+  left : -20px;
 }
-  
+
 .tracks>span {
     display: inline-block;
     height: 3px;
@@ -235,89 +236,41 @@ animation-delay: -0.6s;
     animation: track 2s linear infinite;
     animation-fill-mode: forwards;
 }
-   
+
 .tracks>span:nth-child(2) {
     animation-delay: -1s;
 }
 
 
-.smokes:after{
-    display: block;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    right: 8px;
-    top: 15px;
-    z-index: -1;
-    animation: smoke 1s linear infinite;
-    animation-delay: -0.3s;
+.smoke span,
+.smoke:before,
+.smoke:after {
+  display: block;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 7px;
+  top: 15px;
+  z-index: -1;
+  animation: smok 1s linear infinite;
+  animation-delay: -0.6s;
 }
 
-.smokes:before{
-    display: block;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    right: 8px;
-    top: 15px;
-    z-index: -1;
-    animation: smoke 1s linear infinite;
+.smoke:before {
+  animation: smok 1s linear infinite;
 }
 
-.smokes>span:before{
-    display: block;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    right: 8px;
-    top: 15px;
-    z-index: -1;
-    animation: smoke 1s linear infinite;
-    animation-delay: -0.6s;
+.smoke:after {
+  animation: smok 1s linear infinite;
+  animation-delay: -0.3s;
 }
 
 
-/* .smokes {
-  &:before, 
-  &:after,
-  span:before {
-    display: block;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    right: 8px;
-    top: 15px;
-    z-index: -1;
-  }
-  
-  &:before {
-    animation: smoke 1s linear infinite;
-  }
-  
-  span:before {
-    animation: smoke 1s linear infinite;
-    animation-delay: -0.6s;
-  }
-  
-  &:after {
-    animation: smoke 1s linear infinite;
-    animation-delay: -0.3s;
-  }
-} */
 
-@keyframes smoke {
+@keyframes smok {
   100% {
    top: -50px;
    opacity: 0.5;
@@ -335,4 +288,3 @@ animation-delay: -0.6s;
    left: -200px;
   }
 }
-
